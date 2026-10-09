@@ -60,7 +60,7 @@ SunChaser มีความน่าสนใจตรงที่ย่อส�
 
 **Board:** Arduino UNO / ESP32
 
-**Sensor:** LDR ตรวจจับทิศทางแสง, วงจรแบ่งแรงดันสำหรับวัดแรงดันแบตเตอรี่
+**Sensor:** LDR ตรวจจับทิศทางแสง
 
 **Module:** แผงโซลาร์เซลล์, โมดูลชาร์จแบตเตอรี่จากแผงโซลาร์, แบตเตอรี่, เซอร์โวมอเตอร์, จอ LCD
 
@@ -73,3 +73,4 @@ SunChaser มีความน่าสนใจตรงที่ย่อส�
 - CleanTechnica. (2014). *World's Largest Tracking Solar PV Plant Completed In California.* https://cleantechnica.com/2014/05/23/worlds-largest-tracking-solar-pv-plant-completed-california/
 - RenewEconomy. *World's biggest solar PV tracking plant completed in US.* https://reneweconomy.com.au/worlds-biggest-solar-pv-tracking-plant-completed-in-us-64379
 - Electromaker. *Arduino Dual-axis Solar Tracker: 40% More Power.* https://www.electromaker.io/project/view/arduino-dual-axis-solar-tracker-40-more-power
+- https://www.youtube.com/watch?v=Ms-8QUGW0-s
