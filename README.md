@@ -74,5 +74,6 @@ SunChaser มีความน่าสนใจตรงที่ย่อส�
 - *DIY เครื่องชาร์จแบตเตอรี่ พลังงานแสงอาทิตย์ จากแผงโซลาร์เซลล์5V.* https://www.youtube.com/watch?v=Ms-8QUGW0-s
 
 ## Website & Video
-[SunChaser Website](https://wasinmueanchit.github.io/SunChaser/)
-[Video](https://youtu.be/7FypcMhzrbM)
+
+- [SunChaser Website](https://wasinmueanchit.github.io/SunChaser/)
+- [Video](https://youtu.be/7FypcMhzrbM)
