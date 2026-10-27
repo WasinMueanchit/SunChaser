@@ -73,5 +73,6 @@ SunChaser มีความน่าสนใจตรงที่ย่อส�
 - Electromaker. *Arduino Dual-axis Solar Tracker: 40% More Power.* https://www.electromaker.io/project/view/arduino-dual-axis-solar-tracker-40-more-power
 - *DIY เครื่องชาร์จแบตเตอรี่ พลังงานแสงอาทิตย์ จากแผงโซลาร์เซลล์5V.* https://www.youtube.com/watch?v=Ms-8QUGW0-s
 
-## Website
+## Website & Video
 [SunChaser Website](https://wasinmueanchit.github.io/SunChaser/)
+[Video](https://youtu.be/7FypcMhzrbM)
