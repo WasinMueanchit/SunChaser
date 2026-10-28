@@ -2,9 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  
-<meta name="referrer" content="origin">
-
+  <meta name="referrer" content="origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SunChaser | Physical Computing 2026</title>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,21 +40,21 @@
     <section id="abstract" class="section-block">
       <h2 class="section-heading">บทคัดย่อ</h2>
       <p class="abstract-body">
-        <strong>SunChaser</strong> เป็นโครงงานแผงโซลาร์เซลล์ขนาดเล็กที่สามารถหมุนตามแสงอาทิตย์ได้เองโดยอัตโนมัติ เพื่อแก้ปัญหาแผงโซลาร์เซลล์แบบเดิมที่ติดตั้งอยู่กับที่ ทำให้รับแสงได้ไม่เต็มที่เมื่อดวงอาทิตย์เคลื่อนที่ตลอดวัน ระบบนี้ทำงานโดยใช้ LDR (Light Dependent Resistor) เปรียบเทียบความสว่างเพื่อสั่งให้เซอร์โวมอเตอร์หมุนแผงหันไปหาทิศทางที่มีแสงมากกว่าอยู่เสมอ นอกจากนี้ พลังงานที่ได้ยังถูกนำไปชาร์จเก็บไว้ในแบตเตอรี่ผ่านแผงโซลาร์เซลล์ และสามารถดึงไฟจากแบตเตอรี่กลับมาเลี้ยงบอร์ด Arduino ได้โดยตรง ทำให้ระบบสามารถทำงานได้ต่อเนื่องด้วยตัวเองโดยไม่ต้องเสียบปลั๊กไฟ พร้อมมีหน้าจอ LCD คอยแสดงผลเปอร์เซ็นต์แบตเตอรี่ที่เหลืออยู่
+        <strong>SunChaser</strong> เป็นโครงงานแผงโซลาร์เซลล์ขนาดเล็กที่สามารถหมุนตามแสงอาทิตย์ได้เองโดยอัตโนมัติ เพื่อแก้ปัญหาแผงโซลาร์เซลล์แบบเดิมที่ติดตั้งอยู่กับที่ ทำให้รับแสงได้ไม่เต็มที่เมื่อดวงอาทิตย์เคลื่อนที่ตลอดวัน ระบบนี้ทำงานโดยใช้ LDR (Light Dependent Resistor) เปรียบเทียบความสว่างเพื่อสั่งให้เซอร์โวมอเตอร์หมุนแผงหันไปหาทิศทางที่มีแสงมากกว่าอยู่เสมอ นอกจากนี้ พลังงานที่ได้ยังถูกนำไปชาร์จเก็บไว้ในแบตเตอรี่ผ่านแผงโซลาร์เซลล์ และสามารถดึงไฟจากแบตเตอรี่กลับมาเลี้ยงบอร์ด Arduino ได้โดยตรง พร้อมต่อวงจรแบ่งแรงดันไฟฟ้าเพื่อวัดระดับแรงดันแบตเตอรี่ผ่านขา <strong>A2</strong> และแสดงผลแรงดันรวมถึงเปอร์เซ็นต์แบตเตอรี่แบบเรียลไทม์ผ่านจอ <strong>LCD I2C (16x2)</strong> ทำให้ระบบสามารถทำงานได้ต่อเนื่องด้วยตัวเอง
       </p>
     </section>
 
     <section id="overview" class="section-block">
       <h2 class="section-heading">ภาพรวมโครงการ</h2>
       <p>
-        <strong>SunChaser</strong> คือระบบแผงโซลาร์เซลล์ขนาดเล็กที่หมุนตามดวงอาทิตย์ได้โดยอัตโนมัติ ใช้ LDR ตรวจจับทิศทางของแสง แล้วสั่งมอเตอร์หมุนแผงไปด้านที่มีแสงอยู่เสมอ พลังงานที่ได้จะถูกชาร์จเข้าแบตเตอรี่เพื่อเป็นไฟสำรอง โดยมอเตอร์ เซนเซอร์ พร้อมแสดงเปอร์เซ็นต์แบตเตอรี่บนจอ LCD
+        <strong>SunChaser</strong> คือระบบแผงโซลาร์เซลล์ขนาดเล็กที่หมุนตามดวงอาทิตย์ได้โดยอัตโนมัติ ใช้ LDR ตรวจจับทิศทางของแสง แล้วสั่งมอเตอร์หมุนแผงไปด้านที่มีแสงอยู่เสมอ พลังงานที่ได้จะถูกชาร์จเข้าแบตเตอรี่เพื่อเป็นไฟสำรอง พร้อมแสดงสถานะแรงดันและเปอร์เซ็นต์แบตเตอรี่บนจอ LCD I2C
       </p>
 
       <div style="margin-top: 1.25rem;">
         <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">จุดประสงค์ของโครงการ</h3>
         <ol class="clean-list">
           <li>สร้างระบบแผงโซลาร์เซลล์ที่หมุนตามดวงอาทิตย์ เพื่อให้แผงรับแสงได้มากกว่าแผงแบบติดตาย</li>
-          <li>เก็บพลังงานไว้ในแบตเตอรี่ เพื่อใช้เป็นไฟสำรอง</li>
+          <li>เก็บพลังงานไว้ในแบตเตอรี่ และตรวจสอบระดับแรงดัน/เปอร์เซ็นต์แบตเตอรี่ผ่านจอ LCD ได้อย่างแม่นยำ</li>
         </ol>
       </div>
     </section>
@@ -64,7 +62,7 @@
     <section id="benefits" class="section-block">
       <h2 class="section-heading">ประโยชน์ของโครงการ</h2>
       <p style="font-size: 1rem; color: #1f2937; line-height: 1.8;">
-        โครงงานนี้เป็นประโยชน์ต่อบุคคลทั่วไปที่ต้องการใช้งานแผงโซลาร์เซลล์ ผู้ที่ต้องการประหยัดค่าไฟฟ้า และผู้ที่อาศัยอยู่ในพื้นที่ห่างไกลหรือไม่มีโครงข่ายไฟฟ้าหลัก โดยช่วยให้มีแหล่งพลังงานสำรองขนาดพกพาที่สามารถผลิตและเลี้ยงพลังงานตัวเองได้ มีต้นทุนต่ำ เข้าถึงและสร้างขึ้นเองได้ง่าย และช่วยส่งเสริมการใช้พลังงานสะอาดเพื่อลดมลภาวะต่อสิ่งแวดล้อม
+        โครงงานนี้เป็นประโยชน์ต่อบุคคลทั่วไปที่ต้องการใช้งานแผงโซลาร์เซลล์ ผู้ที่ต้องการประหยัดค่าไฟฟ้า และผู้ที่อาศัยอยู่ในพื้นที่ห่างไกลหรือไม่มีโครงข่ายไฟฟ้าหลัก โดยช่วยให้มีแหล่งพลังงานสำรองขนาดพกพาที่สามารถผลิตและเลี้ยงพลังงานตัวเองได้ มีระบบแสดงผลสถานะแบตเตอรี่ชัดเจน มีต้นทุนต่ำ เข้าถึงและสร้างขึ้นเองได้ง่าย และช่วยส่งเสริมการใช้พลังงานสะอาดเพื่อลดมลภาวะต่อสิ่งแวดล้อม
       </p>
     </section>
 
@@ -76,29 +74,25 @@
           <div class="flow-badge">วงจรตรวจจับและขับเคลื่อน</div>
           <h3 class="flow-title">1. การตรวจจับแสงและการสั่งการเซอร์โวมอเตอร์</h3>
           <p class="flow-desc">
-            เซนเซอร์ <strong>LDR จะคอยตรวจจับแสง</strong> โดยระบบจะปล่อยกระแสไฟเข้าไปผ่าน LDR และ<strong>วงจรลดแรงดัน</strong> จากนั้นนำค่าแรงดันที่แบ่งได้ไปอ่านค่าสัญญาณแอนะล็อกที่ขา <strong>A0 และ A1</strong> ของบอร์ด Arduino เพื่อเปรียบเทียบความสว่าง หากด้านใดมีความสว่างมากกว่า ไมโครคอนโทรลเลอร์จะสั่งให้ <strong>Servo Motor หมุนหันแผงโซลาร์เซลล์ไปยังด้านที่สว่างกว่านั้นทันที</strong>
+            เซนเซอร์ <strong>LDR จะคอยตรวจจับแสง</strong> โดยระบบจะปล่อยกระแสไฟเข้าไปผ่าน LDR จากนั้นนำค่าสัญญาณแอนะล็อกที่อ่านได้จากขา <strong>A0 และ A1</strong> มาเปรียบเทียบความสว่าง หากผลต่างมากกว่าค่า <strong>Threshold (80)</strong> ไมโครคอนโทรลเลอร์จะสั่งให้ <strong>Servo Motor หมุนปรับองศาแผงโซลาร์เซลล์ไปยังด้านที่สว่างกว่าทันที</strong>
           </p>
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">วงจรพลังงานและชาร์จแบตเตอรี่</div>
-          <h3 class="flow-title">2. การชาร์จแบตเตอรี่และการจ่ายไฟเลี้ยงระบบ</h3>
+          <div class="flow-badge">วงจรพลังงานและการวัดแบตเตอรี่</div>
+          <h3 class="flow-title">2. การชาร์จแบตเตอรี่ การวัดแรงดัน และการแสดงผล</h3>
           <p class="flow-desc">
-            ในส่วนของการชาร์จแบตเตอรี่ จะใช้ <strong>Solarcell 2 ตัว ต่อแบบอนุกรม</strong> เพื่อให้ระดับแรงดัน (Voltage) สูงเพียงพอถึงระดับที่สามารถชาร์จแบตเตอรี่ได้ แล้วต่อกระแสไฟผ่าน <strong>Diode</strong> เข้าสู่ Battery เพื่อป้องกันไฟไหลย้อนกลับในช่วงที่ไม่มีแดด โดยใช้<strong>ถ่าน 2 ตัว ขนาด 3.7V (ขนาน)</strong>
-          </p>
-          <p class="flow-desc" style="margin-top: 0.65rem;">
-            จากนั้นที่ตัว Battery จะมี <strong>โมดูลแปลงแรงดันไฟฟ้าแบบเพิ่มแรงดัน</strong> เพื่อยกระดับและควบคุมแรงดันไฟ แล้วต่อด้วย <strong>ขั้วต่อกระแสตรงแบบกระบอก</strong> สำหรับเสียบใช้งานจ่ายไฟตรงเข้าบอร์ด Arduino ทำให้ระบบสามารถเลี้ยงตัวเองได้
+            ใช้ <strong>Solarcell 2 ตัว ต่อแบบอนุกรม</strong> เพื่อให้ระดับแรงดันสูงพอที่จะชาร์จแบตเตอรี่ผ่าน <strong>Diode</strong> ป้องกันไฟไหลย้อนกลับ พร้อมใช้วงจรแบ่งแรงดันไฟฟ้า (R1 = 10kΩ, R2 = 10kΩ) ต่อเข้ากับขา <strong>A2</strong> ของ Arduino เพื่ออ่านค่าแรงดันแบตเตอรี่ คำนวณเป็นเปอร์เซ็นต์ และแสดงผลผ่านจอ <strong>LCD I2C</strong>
           </p>
         </div>
       </div>
 
       <h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #111827;">สรุปขั้นตอนการทำงานของระบบ</h3>
       <ol class="clean-list">
-        <li><strong>ตรวจจับทิศทางแสง:</strong> ปล่อยไฟผ่าน LDR 2 ตัวและวงจรลดแรงดัน นำไปอ่านค่าแอนะล็อกที่ขา A0 และ A1</li>
-        <li><strong>ประมวลผลและหมุนแผงตามแสง:</strong> เปรียบเทียบค่าความสว่างระหว่างสองด้าน หากด้านใดมากกว่า จะสั่งให้มอเตอร์หมุนแผงหันไปทางด้านนั้น</li>
-        <li><strong>ผลิตกระแสไฟฟ้าและป้องกันไฟย้อน:</strong> ใช้ Solarcell 2 ตัวต่ออนุกรมยกระดับแรงดันให้พอชาร์จแบตเตอรี่ โดยใช้ถ่าน 2 ตัว ขนาด 3.7V และส่งไฟผ่าน Diode ป้องกันไฟไหลย้อนกลับเข้าสู่ Battery</li>
-        <li><strong>จ่ายไฟกลับมาเลี้ยงระบบ:</strong> ดึงไฟจาก Battery ผ่านโมดูลแปลงแรงดันไฟฟ้าแบบเพิ่มแรงดัน แล้วต่อสายผ่านขั้วต่อกระแสตรงแบบกระบอก เสียบเข้าบอร์ด Arduino เพื่อจ่ายไฟเลี้ยงระบบ</li>
-        <li><strong>แสดงสถานะ:</strong> จอ LCD แสดงสถานะการทำงานและระดับเปอร์เซ็นต์ของแบตเตอรี่</li>
+        <li><strong>ตรวจจับทิศทางแสง:</strong> อ่านค่าความสว่างจาก LDR ผ่านขา A0 และ A1</li>
+        <li><strong>ประมวลผลและหมุนแผงตามแสง:</strong> เปรียบเทียบค่าความสว่างด้วยเกณฑ์ Threshold (80) และสั่งเซอร์โวมอเตอร์ปรับทิศทางแผงโซลาร์เซลล์</li>
+        <li><strong>วัดระดับแรงดันแบตเตอรี่:</strong> อ่านค่าแอนะล็อกที่ขา A2 ผ่านวงจรแบ่งแรงดัน คำนวณแรงดันจริงและแปลงเป็นเปอร์เซ็นต์แบตเตอรี่</li>
+        <li><strong>แสดงผลสถานะ:</strong> อัปเดตข้อมูล Voltage และ Battery % บนจอ LCD I2C แบบเรียลไทม์</li>
       </ol>
     </section>
 
@@ -108,42 +102,37 @@
       <div class="hardware-specs">
         <div class="hw-item">
           <div class="hw-item-name">Arduino UNO R4</div>
-          <div class="hw-item-desc">ไมโครคอนโทรลเลอร์ประมวลผลค่าความสว่างจาก LDR และสั่งการมอเตอร์</div>
+          <div class="hw-item-desc">ไมโครคอนโทรลเลอร์ประมวลผล ควบคุมมอเตอร์ อ่านค่า LDR และวัดแรงดันแบตเตอรี่</div>
         </div>
 
         <div class="hw-item">
-          <div class="hw-item-name">LDR 2 ตัว + วงจรลดแรงดัน</div>
-          <div class="hw-item-desc">ตรวจจับแสงผ่านวงจรลดแรงดัน แล้วส่งสัญญาณอ่านค่าที่ขา A0 และ A1</div>
+          <div class="hw-item-name">LDR 2 ตัว</div>
+          <div class="hw-item-desc">ตรวจจับแสงส่งสัญญาณเข้าขา A0 และ A1</div>
         </div>
 
         <div class="hw-item">
           <div class="hw-item-name">Solarcell 2 ตัว (ต่ออนุกรม)</div>
-          <div class="hw-item-desc">ต่อแบบอนุกรมเพื่อให้ระดับแรงดัน (Volt) สูงเพียงพอต่อการชาร์จแบตเตอรี่</div>
+          <div class="hw-item-desc">ผลิตกระแสไฟฟ้าและยกระดับแรงดันสำหรับชาร์จแบตเตอรี่</div>
         </div>
 
         <div class="hw-item">
           <div class="hw-item-name">Diode</div>
-          <div class="hw-item-desc">ต่อคั่นก่อนเข้าแบตเตอรี่ เพื่อป้องกันกระแสไฟฟ้าไหลย้อนกลับในช่วงไม่มีแดด</div>
+          <div class="hw-item-desc">ป้องกันกระแสไฟฟ้าไหลย้อนกลับเข้าสู่แผงโซลาร์เซลล์ในช่วงไม่มีแสงแดด</div>
         </div>
 
         <div class="hw-item">
-          <div class="hw-item-name">ถ่านชาร์จ 3.7V จำนวน 2 ตัว</div>
-          <div class="hw-item-desc">แบตเตอรี่ลิเธียมสำหรับกักเก็บพลังงานไฟฟ้าและจ่ายไฟกลับมาเลี้ยงระบบ</div>
-        </div>
-
-        <div class="hw-item">
-          <div class="hw-item-name">โมดูลแปลงแรงดันไฟฟ้าแบบเพิ่มแรงดัน + ขั้วต่อกระแสตรงแบบกระบอก</div>
-          <div class="hw-item-desc">วงจรแปลงแรงดันไฟฟ้าแบบเพิ่มแรงดันและขั้วต่อกระแสตรงแบบกระบอก สำหรับเสียบจ่ายไฟเลี้ยงเข้าบอร์ด Arduino</div>
+          <div class="hw-item-name">วงจรแบ่งแรงดันไฟฟ้า (R1 = 10kΩ, R2 = 10kΩ)</div>
+          <div class="hw-item-desc">แบ่งแรงดันไฟฟ้าเพื่อความปลอดภัยในการวัดค่าแรงดันแบตเตอรี่ผ่านขา A2</div>
         </div>
 
         <div class="hw-item">
           <div class="hw-item-name">เซอร์โวมอเตอร์</div>
-          <div class="hw-item-desc">มอเตอร์ขับเคลื่อนสำหรับหมุนปรับองศาของแผงโซลาร์เซลล์ไปยังด้านที่สว่างกว่า</div>
+          <div class="hw-item-desc">มอเตอร์ขับเคลื่อนปรับองศาแผงโซลาร์เซลล์</div>
         </div>
 
         <div class="hw-item">
-          <div class="hw-item-name">จอ LCD, เบรดบอร์ด, สายจัมเปอร์</div>
-          <div class="hw-item-desc">จอ LCD I2C แสดงเปอร์เซ็นต์แบตเตอรี่ พร้อมอุปกรณ์ต่อวงจรและไลบรารี Servo.h</div>
+          <div class="hw-item-name">จอ LCD I2C (16x2)</div>
+          <div class="hw-item-desc">แสดงผลแรงดันไฟฟ้า (Voltage) และเปอร์เซ็นต์แบตเตอรี่ (Battery %)</div>
         </div>
       </div>
     </section>
@@ -151,15 +140,13 @@
     <section id="video" class="section-block">
       <h2 class="section-heading">วิดีโอสาธิตโครงการ</h2>
       <div class="video-container">
-
-      <iframe
-        src="https://www.youtube.com/embed/7FypcMhzrbM"
-        title="วิดีโอสาธิตโครงการ SunChaser"
-        referrerpolicy="origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-
+        <iframe
+          src="https://www.youtube.com/embed/7FypcMhzrbM"
+          title="วิดีโอสาธิตโครงการ SunChaser"
+          referrerpolicy="origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
       <div style="margin-top: 0.85rem; text-align: right;">
         <a href="https://www.youtube.com/watch?v=7FypcMhzrbM" target="_blank" rel="noopener noreferrer" style="font-size: 0.92rem; color: #ea580c; text-decoration: none; font-weight: 600; cursor: pointer;">
@@ -170,7 +157,6 @@
 
     <section id="poster" class="section-block">
       <h2 class="section-heading">โปสเตอร์นำเสนอโครงงาน</h2>
-      
       <div class="poster-container">
         <div class="poster-frame">
           <img src="images/poster.png" alt="โปสเตอร์โครงงาน SunChaser" onerror="this.style.display='none'; document.getElementById('poster-placeholder').style.display='flex';" />
@@ -186,21 +172,29 @@
           <span class="code-filename">sunchaser_tracker.ino</span>
         </div>
         <pre><code id="code-content">#include &lt;Servo.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 const int ldrPin1 = A0;
 const int ldrPin2 = A1;
+const int batteryPin = A2;
 const int servoPin = 2;
 
 Servo myServo;
 
-// สำหรับ Continuous Rotation Servo
 const int stopSpeed = 90;
 const int upSpeed = 180;
 const int downSpeed = 0;
 
-const int threshold = 20;
+const int threshold = 80;
+
+const float referenceVoltage = 4.48;
+const float R1 = 10000.0;
+const float R2 = 10000.0;
 
 void setup() {
+  setupLCD();
   Serial.begin(9600);
   myServo.attach(servoPin);
   myServo.write(stopSpeed);
@@ -229,7 +223,54 @@ void loop() {
     myServo.write(stopSpeed);
   }
 
+  float voltage = readBatteryVoltage();
+  int percent = constrain(batteryPercent(voltage), 0, 100);
+  displayBattery(voltage, percent);
+
   delay(100);
+}
+
+float readBatteryVoltage() {
+  int raw = analogRead(batteryPin);
+
+  float voltageA0 = raw * referenceVoltage / 1023.0;
+  float batteryVoltage = voltageA0 * (R1 + R2) / R2;
+
+  return batteryVoltage;
+}
+
+int batteryPercent(float voltage) {
+  if (voltage &gt;= 4.20) return 100;
+  if (voltage &lt;= 3.30) return 0;
+  if (voltage &gt;= 4.10) return 90 + (voltage - 4.10) * 100;
+  if (voltage &gt;= 4.00) return 80 + (voltage - 4.00) * 100;
+  if (voltage &gt;= 3.90) return 60 + (voltage - 3.90) * 200;
+  if (voltage &gt;= 3.80) return 40 + (voltage - 3.80) * 200;
+  if (voltage &gt;= 3.70) return 20 + (voltage - 3.70) * 200;
+  return (voltage - 3.30) * 20;
+}
+
+void displayBattery(float voltage, int percent) {
+  lcd.setCursor(0, 0);
+  lcd.print("Voltage: ");
+  lcd.print(voltage, 2);
+  lcd.print("V     ");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Battery: ");
+  lcd.print(percent);
+  lcd.print("%        ");
+}
+
+void setupLCD() {
+  lcd.init();
+  lcd.backlight();
+  lcd.clear();
+
+  lcd.setCursor(0, 0);
+  lcd.print("Battery Monitor");
+  delay(1500);
+  lcd.clear();
 }</code></pre>
       </div>
     </section>
